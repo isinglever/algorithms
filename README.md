@@ -8,4 +8,4 @@
 
 ### 2.1 Elementary Sorts
 
-####
+**[Selection Sorting Algorithm](https://github.com/isinglever/Algorithms/blob/master/src/sorting/Selection.java "The selection sorting algorithm source code")**

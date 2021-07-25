@@ -36,7 +36,9 @@ public class Selection {
         String[] a = list.toArray(new String[0]);
          *************************************/
         //String[] a = new String[5];
-        String[] a = {String.valueOf(1), String.valueOf(4), String.valueOf(3), String.valueOf(5), String.valueOf(1), String.valueOf(2)};
+        String[] a = {String.valueOf(1), String.valueOf(4),
+                String.valueOf(3), String.valueOf(5),
+                String.valueOf(1), String.valueOf(2)};
         sort(a);
         System.out.println(a.length);
         System.out.println(Tools.isSorted(a));
