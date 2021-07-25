@@ -2,9 +2,7 @@ package sorting;
 
 import sorting.Tools;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Selection {
     public static void  sort(Comparable[] a) {
@@ -14,13 +12,13 @@ public class Selection {
             for (int j = i + 1; j < n; j++) {
                 if (Tools.less(a[j], a[min])) {
                     min = j;
-                    Tools.exch(a, i, min);
                 }
-
             }
+            Tools.exch(a, i, min);
         }
     }
     public static void main(String[] args) {
+        /*********************
         List<String> list = new ArrayList<String>();
         Scanner read = new Scanner(System.in);
         do {
@@ -36,8 +34,12 @@ public class Selection {
         read.close();
         System.out.println("List is " + list);
         String[] a = list.toArray(new String[0]);
-        //String[] a = read.delimiter().split(System.lineSeparator());
+         *************************************/
+        //String[] a = new String[5];
+        String[] a = {String.valueOf(1), String.valueOf(4), String.valueOf(3), String.valueOf(5), String.valueOf(1), String.valueOf(2)};
         sort(a);
+        System.out.println(a.length);
+        System.out.println(Tools.isSorted(a));
         Tools.show(a);
 
     }

@@ -12,8 +12,16 @@ public class Tools {
     }
 
     public static void show(Comparable[] a) {
+        System.out.print("Resorted array is ");
         for (int i = 0; i < a.length; i++) {
-            System.out.print("Resorted array is " + a[i] + " ");
+            System.out.print(a[i] + " ");
         }
+    }
+
+    public static boolean isSorted(Comparable[] a) {
+        for (int i = 1; i < a.length; i++) {
+            if (less(a[i], a[i - 1])) return false;
+        }
+        return true;
     }
 }
