@@ -1,4 +1,4 @@
-package sorting;
+package io.github.sorting;
 
 //import java.lang.*;
 

@@ -1,4 +1,4 @@
-package sorting;
+package io.github.sorting;
 
 public class Tools {
     public static boolean less(Comparable v, Comparable w) {

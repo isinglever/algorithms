@@ -1,4 +1,4 @@
-package sorting;
+package io.github.sorting;
 
 public class Insertion {
     public static void sort(Comparable[] a) {

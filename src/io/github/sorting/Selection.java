@@ -1,8 +1,4 @@
-package sorting;
-
-import sorting.Tools;
-
-import java.util.*;
+package io.github.sorting;
 
 public class Selection {
     public static void  sort(Comparable[] a) {

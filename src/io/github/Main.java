@@ -1,4 +1,4 @@
-package com.company;
+package io.github;
 
 public class Main {
 
