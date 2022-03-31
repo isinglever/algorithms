@@ -2,7 +2,7 @@ package io.github.structure;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedList;
+import java.util.ArrayDeque;
 
 public class ArrayList<E>{
     

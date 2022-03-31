@@ -163,28 +163,4 @@ public class LinkedList<E> {
         return node(index).item;
     }
     
-    public boolean offer(E e) {
-        
-    }
-    
-    public E peek() {
-        
-    }
-    
-    public E poll() {
-        
-    }
-    
-    public E pop() {
-        
-    }
-    
-    public void push(E e) {
-        
-    }
-    
-    public E remove() {
-        
-    }
-    
 }
