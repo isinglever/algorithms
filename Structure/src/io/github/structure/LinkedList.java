@@ -2,6 +2,7 @@ package io.github.structure;
 
 import java.util.Collection;
 import java.util.NoSuchElementException;
+import java.util.HashMap;
 
 public class LinkedList<E> {
     
