@@ -6,59 +6,41 @@
 package io.github.sorting;
 
 public class QuickSort {
-    private int[] array;
-    public QuickSort(int[] array) {
-        this.array = array;
+    public void sort(int[] array) {
+        QuickSort.quicksort(array);
     }
     
-    public void sort() {
-        quickSort(array, 0, array.length - 1);
+    public static void quicksort(int[] array) {
+        if (array == null) return;
+        quicksort(array, 0, array.length - 1);
     }
-    public void print() {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+    
+    public static void quicksort(int[] ar, int lo, int hi) {
+        if (lo < hi) {
+           int splitPoint = partition(ar, lo, hi);
+           quicksort(ar, lo, splitPoint);
+           quicksort(ar, splitPoint + 1, hi);
         }
     }
-
-    /**
-     * @author : Ori
-     * @date : 4/12/2022 10:01 AM 
-     * @param src : 
-     * @param begin : 
-     * @param end : 
-     * @return : void
-     *@description: 
-     */
-    private void quickSort(int[] src, int begin, int end) {
-        if (begin < end) {
-            int key = src[begin];
-            int i = begin;
-            int j = end;
-            while (i < j) {
-                while (i < j && src[j] > key) {
-                    j--;
-                }
-                if (i < j) {
-                    src[i] = src[j];
-                    i++;
-                }
-                while (i < j && src[i] < key) {
-                    i++;
-                }
-                if (i < j) {
-                    src[j] = src[i];
-                    j--;
-                }src[i] = key;
-                quickSort(src, begin, i - 1);
-                quickSort(src, i + 1, end);
-            }
+    
+    private static int partition(int[] ar, int lo, int hi) {
+        int pivot = ar[lo];
+        int i = lo - 1, j = hi + 1;
+        while (true) {
+            do {
+                i++;
+            } while (ar[i] < pivot);
+            do {
+                j--;
+            } while (ar[j] > pivot);
+            if (i < j) swap(ar, i , j);
+            else return j;
         }
     }
-
-    public static void main(String[] args) {
-        int[] array = {5,6,3,5,8,1,9,3,2};
-        QuickSort quickSort = new QuickSort(array);
-        quickSort.sort();
-        quickSort.print();
+    
+    private static void swap(int[] ar, int i, int j) {
+        int tmp = ar[i];
+        ar[i] = ar[j];
+        ar[j] = tmp;
     }
 }
