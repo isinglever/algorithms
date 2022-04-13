@@ -5,6 +5,8 @@
  */
 package io.github.sorting;
 
+import java.util.Arrays;
+
 public class QuickSort {
     public void sort(int[] array) {
         QuickSort.quicksort(array);
@@ -42,5 +44,12 @@ public class QuickSort {
         int tmp = ar[i];
         ar[i] = ar[j];
         ar[j] = tmp;
+    }
+
+    public static void main(String[] args) {
+        QuickSort sorter = new QuickSort();
+        int[] array = {10,4,6,4,8,-13,2,3};
+        sorter.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 }
